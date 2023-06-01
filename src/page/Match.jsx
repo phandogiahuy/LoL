@@ -13,17 +13,17 @@ export const Match = ({ i }) => {
       }}
     >
       <div style={{ width: "40%" }}>
-        <img src={i.img} style={{ width: "130%" }} />
+        <img src={i.img} style={{ width: "135%" }} />
       </div>
       <div
         style={{
           display: "flex",
           flexDirection: "column",
-          width: "44%",
-          marginLeft: "60px",
+          width: "41%",
+          marginLeft: "50px",
         }}
       >
-        <div style={{ display: "flex", width: "100%" }}>
+        <div style={{ display: "flex", width: "100%", padding: "1px" }}>
           <img
             src={i.item_1}
             style={{ width: "25%", height: "60%", padding: "2px" }}
