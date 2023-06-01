@@ -28,7 +28,7 @@ const postChampion1 = async ({
   item_17,
   item_18,
 }) => {
-  const { data } = await axios.post(`http://localhost:5000/champion/1`, {
+  const { data } = await axios.post(`https://apilolrandom.onrender.com/1`, {
     champion,
     img,
     item_1,
@@ -85,7 +85,7 @@ const postChampion2 = async ({
   item_17,
   item_18,
 }) => {
-  const { data } = await axios.post(`http://localhost:5000/champion/2`, {
+  const { data } = await axios.post(`https://apilolrandom.onrender.com/2`, {
     champion,
     img,
     item_1,
