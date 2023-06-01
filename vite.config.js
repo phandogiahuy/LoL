@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/champion": {
-        target: "http://localhost:5000",
+        target: "https://apilolrandom.onrender.com",
         changeOrigin: true,
       },
     },

@@ -7,13 +7,17 @@ import {
 } from "../../constant/queryKey";
 
 const getChampDatabase = async () => {
-  const { data } = await axios.get(`https://apilolrandom.onrender.com/1`);
+  const { data } = await axios.get(
+    `https://apilolrandom.onrender.com/champion/1`
+  );
   return data;
 };
 const useGetChampionDatabase1 = () =>
   useQuery([GET_CHAMPION_FROM_DATABASE_1], getChampDatabase);
 const getChampDatabase2 = async () => {
-  const { data } = await axios.get(`https://apilolrandom.onrender.com/2`);
+  const { data } = await axios.get(
+    `https://apilolrandom.onrender.com/champion/2`
+  );
   return data;
 };
 const useGetChampionDatabase2 = () =>

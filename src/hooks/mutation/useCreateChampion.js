@@ -28,28 +28,31 @@ const postChampion1 = async ({
   item_17,
   item_18,
 }) => {
-  const { data } = await axios.post(`https://apilolrandom.onrender.com/1`, {
-    champion,
-    img,
-    item_1,
-    item_2,
-    item_3,
-    item_4,
-    item_5,
-    item_6,
-    item_7,
-    item_8,
-    item_9,
-    item_10,
-    item_11,
-    item_12,
-    item_13,
-    item_14,
-    item_15,
-    item_16,
-    item_17,
-    item_18,
-  });
+  const { data } = await axios.post(
+    `https://apilolrandom.onrender.com/champion/1`,
+    {
+      champion,
+      img,
+      item_1,
+      item_2,
+      item_3,
+      item_4,
+      item_5,
+      item_6,
+      item_7,
+      item_8,
+      item_9,
+      item_10,
+      item_11,
+      item_12,
+      item_13,
+      item_14,
+      item_15,
+      item_16,
+      item_17,
+      item_18,
+    }
+  );
   return data;
 };
 const useCreateChampion1 = () => {
@@ -85,28 +88,31 @@ const postChampion2 = async ({
   item_17,
   item_18,
 }) => {
-  const { data } = await axios.post(`https://apilolrandom.onrender.com/2`, {
-    champion,
-    img,
-    item_1,
-    item_2,
-    item_3,
-    item_4,
-    item_5,
-    item_6,
-    item_7,
-    item_8,
-    item_9,
-    item_10,
-    item_11,
-    item_12,
-    item_13,
-    item_14,
-    item_15,
-    item_16,
-    item_17,
-    item_18,
-  });
+  const { data } = await axios.post(
+    `https://apilolrandom.onrender.com/champion/2`,
+    {
+      champion,
+      img,
+      item_1,
+      item_2,
+      item_3,
+      item_4,
+      item_5,
+      item_6,
+      item_7,
+      item_8,
+      item_9,
+      item_10,
+      item_11,
+      item_12,
+      item_13,
+      item_14,
+      item_15,
+      item_16,
+      item_17,
+      item_18,
+    }
+  );
   return data;
 };
 const useCreateChampion2 = () => {
