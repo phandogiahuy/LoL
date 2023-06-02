@@ -119,8 +119,8 @@ const App = () => {
   // }
 
   const handleClickRandom1 = async (e) => {
-    if (click1 === true) {
-      await delete_data_1.mutate();
+    if (data1.data.length > 0) {
+      delete_data_1.mutate();
     }
     const randomChampion_1 = [];
 
@@ -174,19 +174,18 @@ const App = () => {
           item_17: finalItem[2].item2[3].img,
           item_18: `https://ddragon.leagueoflegends.com/cdn/13.10.1/img/item/${finalItem[2].item3}.png`,
         };
-        await champion1.mutate(lol_1);
+        champion1.mutate(lol_1);
       }
     }
     // setRandomItem1(itemRandom1);
-    setClick1(true);
   };
   const handleClickDelete1 = (e) => {
     delete_data_1.mutate();
   };
 
   const handleClickRandom2 = async (e) => {
-    if (click2 === true) {
-      await delete_data_2.mutate();
+    if (data1.data.length > 0) {
+      delete_data_2.mutate();
     }
     const randomChampion_2 = [];
     while (randomChampion_2.length < 14) {
@@ -239,10 +238,9 @@ const App = () => {
           item_17: finalItem[2].item2[3].img,
           item_18: `https://ddragon.leagueoflegends.com/cdn/13.10.1/img/item/${finalItem[2].item3}.png`,
         };
-        await champion2.mutate(lol_2);
+        champion2.mutate(lol_2);
       }
     }
-    setClick2(true);
   };
 
   const handleClickDelete2 = (e) => {
