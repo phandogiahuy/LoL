@@ -184,7 +184,7 @@ const App = () => {
   };
 
   const handleClickRandom2 = async (e) => {
-    if (data1.data.length > 0) {
+    if (data2.data.length > 0) {
       delete_data_2.mutate();
     }
     const randomChampion_2 = [];
