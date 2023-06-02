@@ -98,8 +98,6 @@ const App = () => {
       h[0][i].maps[12] &&
       !h[0][i]["into"]
     ) {
-      console.log(i);
-
       item_depth_3.push({
         img: `https://ddragon.leagueoflegends.com/cdn/13.10.1/img/item/${i}.png`,
         depth: `${h[0][i].depth}`,
