@@ -7,7 +7,9 @@ import axios from "axios";
 import { message } from "antd";
 
 const deleteChampion1 = async () => {
-  const { data } = await axios.delete(`http://localhost:5000/champion/1`);
+  const { data } = await axios.delete(
+    `https://apilolrandom.onrender.com/champion/1`
+  );
   return data;
 };
 const useDeleteChampion1 = () => {
@@ -23,7 +25,9 @@ const useDeleteChampion1 = () => {
   });
 };
 const deleteChampion2 = async () => {
-  const { data } = await axios.delete(`http://localhost:5000/champion/2`);
+  const { data } = await axios.delete(
+    `https://apilolrandom.onrender.com/champion/2`
+  );
   return data;
 };
 const useDeleteChampion2 = () => {
