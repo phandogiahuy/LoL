@@ -5,10 +5,13 @@ export const Match = ({ i }) => {
 
   return (
     <Col
-      span={12}
+      xs={24}
+      sm={12}
+      md={12}
+      lg={12}
       style={{
         display: "flex",
-        padding: "5px",
+        padding: "1%",
         marginTop: "20px",
         alignItems: "center",
       }}
@@ -21,59 +24,59 @@ export const Match = ({ i }) => {
           display: "flex",
           flexDirection: "column",
           width: "40%",
-          marginLeft: "40px",
+          marginLeft: "10%",
         }}
       >
-        <div style={{ display: "flex", width: "100%", padding: "1px" }}>
+        <div style={{ display: "flex", width: "100%", padding: "1%" }}>
           <img
             src={i.item_1}
-            style={{ width: "25%", height: "60%", padding: "2px" }}
+            style={{ width: "25%", height: "60%", padding: "1%" }}
           />
           <img
             src={i.item_2}
-            style={{ width: "25%", height: "60%", padding: "2px" }}
+            style={{ width: "25%", height: "60%", padding: "1%" }}
           />
           <img
             src={i.item_3}
-            style={{ width: "25%", height: "60%", padding: "2px" }}
+            style={{ width: "25%", height: "60%", padding: "1%" }}
           />
           <img
             src={i.item_4}
-            style={{ width: "25%", height: "60%", padding: "2px" }}
+            style={{ width: "25%", height: "60%", padding: "1%" }}
           />
           <img
             src={i.item_5}
-            style={{ width: "25%", height: "60%", padding: "2px" }}
+            style={{ width: "25%", height: "60%", padding: "1%" }}
           />
           <img
             src={i.item_6}
-            style={{ width: "25%", height: "60%", padding: "2px" }}
+            style={{ width: "25%", height: "60%", padding: "1%" }}
           />
         </div>
-        <div style={{ display: "flex", width: "100%" }}>
+        <div style={{ display: "flex", width: "100%", padding: "1%" }}>
           <img
             src={i.item_7}
-            style={{ width: "25%", height: "60%", padding: "2px" }}
+            style={{ width: "25%", height: "60%", padding: "1%" }}
           />
           <img
             src={i.item_8}
-            style={{ width: "25%", height: "60%", padding: "2px" }}
+            style={{ width: "25%", height: "60%", padding: "1%" }}
           />
           <img
             src={i.item_9}
-            style={{ width: "25%", height: "60%", padding: "2px" }}
+            style={{ width: "25%", height: "60%", padding: "1%" }}
           />
           <img
             src={i.item_10}
-            style={{ width: "25%", height: "60%", padding: "2px" }}
+            style={{ width: "25%", height: "60%", padding: "1%" }}
           />
           <img
             src={i.item_11}
-            style={{ width: "25%", height: "60%", padding: "2px" }}
+            style={{ width: "25%", height: "60%", padding: "1%" }}
           />
           <img
             src={i.item_12}
-            style={{ width: "25%", height: "60%", padding: "2px" }}
+            style={{ width: "25%", height: "60%", padding: "1%" }}
           />
         </div>
       </div>

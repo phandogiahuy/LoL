@@ -1,4 +1,4 @@
-import { Card, Row, Col, Button, Divider, Skeleton } from "antd";
+import { Card, Row, Col, Button, Divider, Skeleton, Image } from "antd";
 import { Affix } from "antd";
 
 import "./App.css";
@@ -247,7 +247,12 @@ const App = () => {
   return (
     <Container>
       <Wrapper>
-        <Row style={{ display: "flex", justifyContent: "center" }}>
+        <Row
+          style={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           <Header>
             <Button type="primary" onClick={handleClickRandom1}>
               Random Champion
@@ -269,7 +274,12 @@ const App = () => {
       </Wrapper>
       <div style={{ flex: 1, backgroundColor: "black" }}></div>
       <Wrapper>
-        <Row style={{ display: "flex", justifyContent: "center" }}>
+        <Row
+          style={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           <Header>
             <Button type="primary" onClick={handleClickRandom2}>
               Random Champion
