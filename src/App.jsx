@@ -120,8 +120,13 @@ const App = () => {
   // }
 
   const handleClickRandom1 = async (e) => {
+<<<<<<< HEAD
     if (data1.data.length > 0) {
       await delete_data_1.mutateAsync();
+=======
+    if (data1.data) {
+      delete_data_1.mutate();
+>>>>>>> 790768b07bf682e1d3d69119e960fa5deccd8bb9
     }
     const randomChampion_1 = [];
 
@@ -186,8 +191,13 @@ const App = () => {
   };
 
   const handleClickRandom2 = async (e) => {
+<<<<<<< HEAD
     if (data2.data.length > 0) {
       await delete_data_2.mutateAsync();
+=======
+    if (data2.data) {
+      delete_data_2.mutate();
+>>>>>>> 790768b07bf682e1d3d69119e960fa5deccd8bb9
     }
     const randomChampion_2 = [];
     while (randomChampion_2.length < 14) {
@@ -251,43 +261,6 @@ const App = () => {
     delete_data_2.mutate();
   };
 
-  if (data1.isLoading) {
-    return (
-      <div>
-        <Skeleton />
-      </div>
-    );
-  }
-  // if (data1.isSuccess) {
-  // }
-  // console.log(data1.data);
-  if (data2.isLoading) {
-    return (
-      <div>
-        <Skeleton />
-      </div>
-    );
-  }
-
-  if (data2.isLoading) {
-    return (
-      <div>
-        <Skeleton />
-      </div>
-    );
-  }
-  // if (data1.data.length == 14) {
-  //   let h = [];
-  //   for (let i = 0; i < randomItem1.length; i++) {
-  //     h.push(randomItem1[i]);
-  //     console.log(h);
-  //     if (h.length == 2) {
-  //       data1.data = data1.data.map((i) => ({ ...i, order: h }));
-  //       h = [];
-  //     }
-  //   }
-  //   console.log(data1.data);
-  // }
   return (
     <Container>
       <Wrapper>
@@ -305,8 +278,19 @@ const App = () => {
               Delete
             </Button>
           </Header>
+<<<<<<< HEAD
           {data1.data.length > 0 &&
             data1.data.map((i) => <Match i={i} key={i.id} />)}
+=======
+
+          {data1.isLoading ? (
+            <div>
+              <Skeleton />
+            </div>
+          ) : (
+            data1.data.map((i) => <Match i={i} key={i.id} />)
+          )}
+>>>>>>> 790768b07bf682e1d3d69119e960fa5deccd8bb9
         </Row>
       </Wrapper>
       <div style={{ flex: 1, backgroundColor: "black" }}></div>
@@ -325,8 +309,13 @@ const App = () => {
               Delete
             </Button>
           </Header>
-          {data2.data.length > 0 &&
-            data2.data.map((i) => <Match i={i} key={i.id} />)}
+          {data2.isLoading ? (
+            <div>
+              <Skeleton />
+            </div>
+          ) : (
+            data2.data.map((i) => <Match i={i} key={i.id} />)
+          )}
         </Row>
       </Wrapper>
     </Container>
