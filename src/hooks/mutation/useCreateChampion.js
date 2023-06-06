@@ -21,12 +21,6 @@ const postChampion1 = async ({
   item_10,
   item_11,
   item_12,
-  item_13,
-  item_14,
-  item_15,
-  item_16,
-  item_17,
-  item_18,
 }) => {
   const { data } = await axios.post(
     `https://apilolrandom.onrender.com/champion/1`,
@@ -45,12 +39,6 @@ const postChampion1 = async ({
       item_10,
       item_11,
       item_12,
-      item_13,
-      item_14,
-      item_15,
-      item_16,
-      item_17,
-      item_18,
     }
   );
   return data;
@@ -81,12 +69,6 @@ const postChampion2 = async ({
   item_10,
   item_11,
   item_12,
-  item_13,
-  item_14,
-  item_15,
-  item_16,
-  item_17,
-  item_18,
 }) => {
   const { data } = await axios.post(
     `https://apilolrandom.onrender.com/champion/2`,
@@ -105,12 +87,6 @@ const postChampion2 = async ({
       item_10,
       item_11,
       item_12,
-      item_13,
-      item_14,
-      item_15,
-      item_16,
-      item_17,
-      item_18,
     }
   );
   return data;

@@ -105,19 +105,6 @@ const App = () => {
       });
     }
   }
-  // const h = [];
-  // if (res.isLoading) {
-  //   return <div>...loading</div>;
-  // } else if (res.isSuccess) {
-  //   for (let i = 1001; i < 3067; i++) {
-  //     h.push({ img: res.data.data[i] });
-  //   }
-  // }
-  // console.log(h);
-  // if (res.isSuccess) {
-  //   for (let i = 0; i < res.data.data.length; i++) {
-  //   }
-  // }
 
   const handleClickRandom1 = async (e) => {
     if (data1.data) {
@@ -130,13 +117,29 @@ const App = () => {
       if (!randomChampion_1.includes(randomChampion)) {
         randomChampion_1.push(randomChampion);
         const finalItem = [];
+        let numbers = [];
+        let numberLegen = [];
+        let numberBoots = [];
+        for (let i = 0; i < 2; i++) {
+          const itemDepth4_1 = [];
+          const itemBoost = [];
 
-        for (let i = 0; i < 3; i++) {
-          const randomBoost = Math.floor(Math.random() * boots.length);
-          const randomItem = Math.floor(Math.random() * item_depth_4.length);
-          let numbers = [];
+          while (itemDepth4_1.length < 1) {
+            const randomItem = Math.floor(Math.random() * item_depth_4.length);
+            if (!numberLegen.includes(randomItem)) {
+              numberLegen.push(randomItem);
+              itemDepth4_1.push(item_depth_4[randomItem]);
+            }
+          }
+          while (itemBoost.length < 1) {
+            const randomBoost = Math.floor(Math.random() * boots.length);
+            if (!numberBoots.includes(randomBoost)) {
+              numberBoots.push(randomBoost);
+              itemBoost.push(boots[randomBoost]);
+            }
+          }
           const itemDepth3_1 = [];
-          while (numbers.length < 4) {
+          while (itemDepth3_1.length < 4) {
             const randomNumber = Math.floor(
               Math.random() * item_depth_3.length
             );
@@ -147,39 +150,30 @@ const App = () => {
             }
           }
           finalItem.push({
-            item1: item_depth_4[randomItem],
+            item1: itemDepth4_1,
             item2: itemDepth3_1,
-            item3: boots[randomBoost],
+            item3: itemBoost,
           });
         }
-        console.log(randomChampion);
         const lol_1 = {
           champion: a[randomChampion].champion,
           img: a[randomChampion].img,
-          item_1: finalItem[0].item1.img,
+          item_1: finalItem[0].item1[0].img,
           item_2: finalItem[0].item2[0].img,
           item_3: finalItem[0].item2[1].img,
           item_4: finalItem[0].item2[2].img,
           item_5: finalItem[0].item2[3].img,
           item_6: `https://ddragon.leagueoflegends.com/cdn/13.10.1/img/item/${finalItem[0].item3}.png`,
-          item_7: finalItem[1].item1.img,
+          item_7: finalItem[1].item1[0].img,
           item_8: finalItem[1].item2[0].img,
           item_9: finalItem[1].item2[1].img,
           item_10: finalItem[1].item2[2].img,
           item_11: finalItem[1].item2[3].img,
           item_12: `https://ddragon.leagueoflegends.com/cdn/13.10.1/img/item/${finalItem[1].item3}.png`,
-          item_13: finalItem[2].item1.img,
-          item_14: finalItem[2].item2[0].img,
-          item_15: finalItem[2].item2[1].img,
-          item_16: finalItem[2].item2[2].img,
-          item_17: finalItem[2].item2[3].img,
-          item_18: `https://ddragon.leagueoflegends.com/cdn/13.10.1/img/item/${finalItem[2].item3}.png`,
         };
-        console.log(lol_1);
         champion1.mutate(lol_1);
       }
     }
-    // setRandomItem1(itemRandom1);
   };
 
   const handleClickRandom2 = async (e) => {
@@ -193,12 +187,28 @@ const App = () => {
         randomChampion_2.push(random_2);
         const finalItem = [];
         // console.log(randomBoost);
-        for (let i = 0; i < 3; i++) {
-          const randomBoost = Math.floor(Math.random() * boots.length);
-          const randomItem = Math.floor(Math.random() * item_depth_4.length);
-          let numbers = [];
+        let numbers = [];
+        let numberLegen = [];
+        let numberBoots = [];
+        for (let i = 0; i < 2; i++) {
+          const itemDepth4_1 = [];
+          const itemBoost = [];
+          while (itemDepth4_1.length < 1) {
+            const randomItem = Math.floor(Math.random() * item_depth_4.length);
+            if (!numberLegen.includes(randomItem)) {
+              numberLegen.push(randomItem);
+              itemDepth4_1.push(item_depth_4[randomItem]);
+            }
+          }
+          while (itemBoost.length < 1) {
+            const randomBoost = Math.floor(Math.random() * boots.length);
+            if (!numberBoots.includes(randomBoost)) {
+              numberBoots.push(randomBoost);
+              itemBoost.push(boots[randomBoost]);
+            }
+          }
           const itemDepth3_1 = [];
-          while (numbers.length < 4) {
+          while (itemDepth3_1.length < 4) {
             const randomNumber = Math.floor(
               Math.random() * item_depth_3.length
             );
@@ -209,39 +219,30 @@ const App = () => {
             }
           }
           finalItem.push({
-            item1: item_depth_4[randomItem],
+            item1: itemDepth4_1,
             item2: itemDepth3_1,
-            item3: boots[randomBoost],
+            item3: itemBoost,
           });
         }
-        console.log(random_2);
         const lol_2 = {
           champion: a[random_2].champion,
           img: a[random_2].img,
-          item_1: finalItem[0].item1.img,
+          item_1: finalItem[0].item1[0].img,
           item_2: finalItem[0].item2[0].img,
           item_3: finalItem[0].item2[1].img,
           item_4: finalItem[0].item2[2].img,
           item_5: finalItem[0].item2[3].img,
           item_6: `https://ddragon.leagueoflegends.com/cdn/13.10.1/img/item/${finalItem[0].item3}.png`,
-          item_7: finalItem[1].item1.img,
+          item_7: finalItem[1].item1[0].img,
           item_8: finalItem[1].item2[0].img,
           item_9: finalItem[1].item2[1].img,
           item_10: finalItem[1].item2[2].img,
           item_11: finalItem[1].item2[3].img,
           item_12: `https://ddragon.leagueoflegends.com/cdn/13.10.1/img/item/${finalItem[1].item3}.png`,
-          item_13: finalItem[2].item1.img,
-          item_14: finalItem[2].item2[0].img,
-          item_15: finalItem[2].item2[1].img,
-          item_16: finalItem[2].item2[2].img,
-          item_17: finalItem[2].item2[3].img,
-          item_18: `https://ddragon.leagueoflegends.com/cdn/13.10.1/img/item/${finalItem[2].item3}.png`,
         };
-        console.log(lol_2);
         champion2.mutate(lol_2);
       }
     }
-    setClick2(true);
   };
 
   return (
