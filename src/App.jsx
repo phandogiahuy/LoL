@@ -120,7 +120,7 @@ const App = () => {
   // }
 
   const handleClickRandom1 = async (e) => {
-    if (data1.data.length > 0) {
+    if (data1.data) {
       await delete_data_1.mutateAsync();
     }
     const randomChampion_1 = [];
@@ -181,12 +181,9 @@ const App = () => {
     }
     // setRandomItem1(itemRandom1);
   };
-  const handleClickDelete1 = (e) => {
-    delete_data_1.mutate();
-  };
 
   const handleClickRandom2 = async (e) => {
-    if (data2.data.length > 0) {
+    if (data2.data) {
       await delete_data_2.mutateAsync();
     }
     const randomChampion_2 = [];
@@ -247,16 +244,6 @@ const App = () => {
     setClick2(true);
   };
 
-  const handleClickDelete2 = (e) => {
-    delete_data_2.mutate();
-  };
-  if (data1.isLoading) {
-    return (
-      <div>
-        <Skeleton />
-      </div>
-    );
-  }
   return (
     <Container>
       <Wrapper>
@@ -270,13 +257,14 @@ const App = () => {
                 Anh Thành
               </h1>
             </Affix>
-            <Button type="primary" onClick={handleClickDelete1}>
-              Delete
-            </Button>
           </Header>
-          {data1.data.map((i) => (
-            <Match i={i} key={i.id} />
-          ))}
+          {data1.isLoading ? (
+            <div>
+              <Skeleton />
+            </div>
+          ) : (
+            data1.data.map((i) => <Match i={i} key={i.id} />)
+          )}
         </Row>
       </Wrapper>
       <div style={{ flex: 1, backgroundColor: "black" }}></div>
@@ -291,9 +279,6 @@ const App = () => {
                 Anh Tùng
               </h1>
             </Affix>
-            <Button type="primary" onClick={handleClickDelete2}>
-              Delete
-            </Button>
           </Header>
           {data2.isLoading ? (
             <div>
@@ -307,5 +292,4 @@ const App = () => {
     </Container>
   );
 };
-
 export default App;

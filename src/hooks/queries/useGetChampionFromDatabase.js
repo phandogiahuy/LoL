@@ -23,3 +23,5 @@ const getChampDatabase2 = async () => {
 const useGetChampionDatabase2 = () =>
   useQuery([GET_CHAMPION_FROM_DATABASE_2], getChampDatabase2);
 export { useGetChampionDatabase1, useGetChampionDatabase2 };
+
+// https://apilolrandom.onrender.com/champion/1
