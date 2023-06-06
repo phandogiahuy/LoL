@@ -10,17 +10,18 @@ export const Match = ({ i }) => {
         display: "flex",
         padding: "5px",
         marginTop: "20px",
+        alignItems: "center",
       }}
     >
-      <div style={{ width: "40%" }}>
+      <div style={{ width: "20%" }}>
         <img src={i.img} style={{ width: "135%" }} />
       </div>
       <div
         style={{
           display: "flex",
           flexDirection: "column",
-          width: "41%",
-          marginLeft: "50px",
+          width: "40%",
+          marginLeft: "40px",
         }}
       >
         <div style={{ display: "flex", width: "100%", padding: "1px" }}>
@@ -75,33 +76,6 @@ export const Match = ({ i }) => {
             style={{ width: "25%", height: "60%", padding: "2px" }}
           />
         </div>
-
-        <div style={{ display: "flex", width: "100%" }}>
-          <img
-            src={i.item_13}
-            style={{ width: "25%", height: "60%", padding: "2px" }}
-          />
-          <img
-            src={i.item_14}
-            style={{ width: "25%", height: "60%", padding: "2px" }}
-          />
-          <img
-            src={i.item_15}
-            style={{ width: "25%", height: "60%", padding: "2px" }}
-          />
-          <img
-            src={i.item_16}
-            style={{ width: "25%", height: "60%", padding: "2px" }}
-          />
-          <img
-            src={i.item_17}
-            style={{ width: "25%", height: "60%", padding: "2px" }}
-          />
-          <img
-            src={i.item_18}
-            style={{ width: "25%", height: "60%", padding: "2px" }}
-          />
-        </div>
       </div>
     </Col>
   );
@@ -116,3 +90,29 @@ export const Match = ({ i }) => {
 //     </Card>
 //   </Col>
 // </Row>
+// <div style={{ display: "flex", width: "100%" }}>
+// <img
+//   src={i.item_13}
+//   style={{ width: "25%", height: "60%", padding: "2px" }}
+// />
+// <img
+//   src={i.item_14}
+//   style={{ width: "25%", height: "60%", padding: "2px" }}
+// />
+// <img
+//   src={i.item_15}
+//   style={{ width: "25%", height: "60%", padding: "2px" }}
+// />
+// <img
+//   src={i.item_16}
+//   style={{ width: "25%", height: "60%", padding: "2px" }}
+// />
+// <img
+//   src={i.item_17}
+//   style={{ width: "25%", height: "60%", padding: "2px" }}
+// />
+// <img
+//   src={i.item_18}
+//   style={{ width: "25%", height: "60%", padding: "2px" }}
+// />
+// </div>

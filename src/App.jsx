@@ -1,4 +1,5 @@
 import { Card, Row, Col, Button, Divider, Skeleton } from "antd";
+import { Affix } from "antd";
 
 import "./App.css";
 import axios from "axios";
@@ -63,7 +64,7 @@ const App = () => {
   for (let i in data.data) {
     a.push({
       champion: i,
-      img: `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${i}_0.jpg?fbclid=IwAR0C__ZgHbDwxEsy6JLGPTOB_gsZkPL8bapr1NoCgLM4bcciirBrRaW_zws`,
+      img: `http://ddragon.leagueoflegends.com/cdn/13.11.1/img/champion/${i}.png`,
     });
   }
   if (res.isLoading) {
@@ -120,7 +121,7 @@ const App = () => {
 
   const handleClickRandom1 = async (e) => {
     if (data1.data.length > 0) {
-      delete_data_1.mutate();
+      await delete_data_1.mutateAsync();
     }
     const randomChampion_1 = [];
 
@@ -151,7 +152,7 @@ const App = () => {
             item3: boots[randomBoost],
           });
         }
-
+        console.log(randomChampion);
         const lol_1 = {
           champion: a[randomChampion].champion,
           img: a[randomChampion].img,
@@ -174,6 +175,7 @@ const App = () => {
           item_17: finalItem[2].item2[3].img,
           item_18: `https://ddragon.leagueoflegends.com/cdn/13.10.1/img/item/${finalItem[2].item3}.png`,
         };
+        console.log(lol_1);
         champion1.mutate(lol_1);
       }
     }
@@ -185,14 +187,13 @@ const App = () => {
 
   const handleClickRandom2 = async (e) => {
     if (data2.data.length > 0) {
-      delete_data_2.mutate();
+      await delete_data_2.mutateAsync();
     }
     const randomChampion_2 = [];
     while (randomChampion_2.length < 14) {
       const random_2 = Math.floor(Math.random() * a.length);
       if (!randomChampion_2.includes(random_2)) {
         randomChampion_2.push(random_2);
-        const randomChampion = Math.floor(Math.random() * a.length);
         const finalItem = [];
         // console.log(randomBoost);
         for (let i = 0; i < 3; i++) {
@@ -216,6 +217,7 @@ const App = () => {
             item3: boots[randomBoost],
           });
         }
+        console.log(random_2);
         const lol_2 = {
           champion: a[random_2].champion,
           img: a[random_2].img,
@@ -238,9 +240,11 @@ const App = () => {
           item_17: finalItem[2].item2[3].img,
           item_18: `https://ddragon.leagueoflegends.com/cdn/13.10.1/img/item/${finalItem[2].item3}.png`,
         };
+        console.log(lol_2);
         champion2.mutate(lol_2);
       }
     }
+    setClick2(true);
   };
 
   const handleClickDelete2 = (e) => {
@@ -292,12 +296,15 @@ const App = () => {
             <Button type="primary" onClick={handleClickRandom1}>
               Random Champion
             </Button>
-            <h1>Anh Thành </h1>
+            <Affix offsetTop={-20}>
+              <h1 style={{ color: "blue", backgroundColor: "blanchedalmond" }}>
+                Anh Thành
+              </h1>
+            </Affix>
             <Button type="primary" onClick={handleClickDelete1}>
               Delete
             </Button>
           </Header>
-
           {data1.data.length > 0 &&
             data1.data.map((i) => <Match i={i} key={i.id} />)}
         </Row>
@@ -309,7 +316,11 @@ const App = () => {
             <Button type="primary" onClick={handleClickRandom2}>
               Random Champion
             </Button>
-            <h1>Anh Tùng </h1>
+            <Affix offsetTop={-20}>
+              <h1 style={{ color: "blue", backgroundColor: "blanchedalmond" }}>
+                Anh Tùng
+              </h1>
+            </Affix>
             <Button type="primary" onClick={handleClickDelete2}>
               Delete
             </Button>
