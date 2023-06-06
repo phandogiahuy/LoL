@@ -120,13 +120,8 @@ const App = () => {
   // }
 
   const handleClickRandom1 = async (e) => {
-<<<<<<< HEAD
     if (data1.data.length > 0) {
       await delete_data_1.mutateAsync();
-=======
-    if (data1.data) {
-      delete_data_1.mutate();
->>>>>>> 790768b07bf682e1d3d69119e960fa5deccd8bb9
     }
     const randomChampion_1 = [];
 
@@ -191,13 +186,8 @@ const App = () => {
   };
 
   const handleClickRandom2 = async (e) => {
-<<<<<<< HEAD
     if (data2.data.length > 0) {
       await delete_data_2.mutateAsync();
-=======
-    if (data2.data) {
-      delete_data_2.mutate();
->>>>>>> 790768b07bf682e1d3d69119e960fa5deccd8bb9
     }
     const randomChampion_2 = [];
     while (randomChampion_2.length < 14) {
@@ -260,7 +250,13 @@ const App = () => {
   const handleClickDelete2 = (e) => {
     delete_data_2.mutate();
   };
-
+  if (data1.isLoading) {
+    return (
+      <div>
+        <Skeleton />
+      </div>
+    );
+  }
   return (
     <Container>
       <Wrapper>
@@ -278,19 +274,9 @@ const App = () => {
               Delete
             </Button>
           </Header>
-<<<<<<< HEAD
-          {data1.data.length > 0 &&
-            data1.data.map((i) => <Match i={i} key={i.id} />)}
-=======
-
-          {data1.isLoading ? (
-            <div>
-              <Skeleton />
-            </div>
-          ) : (
-            data1.data.map((i) => <Match i={i} key={i.id} />)
-          )}
->>>>>>> 790768b07bf682e1d3d69119e960fa5deccd8bb9
+          {data1.data.map((i) => (
+            <Match i={i} key={i.id} />
+          ))}
         </Row>
       </Wrapper>
       <div style={{ flex: 1, backgroundColor: "black" }}></div>
