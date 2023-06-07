@@ -105,17 +105,18 @@ const App = () => {
       });
     }
   }
+  let randomChampion = [];
 
   const handleClickRandom1 = async (e) => {
     if (data1.data) {
       await delete_data_1.mutateAsync();
     }
     const randomChampion_1 = [];
-
     while (randomChampion_1.length < 14) {
-      const randomChampion = Math.floor(Math.random() * a.length);
-      if (!randomChampion_1.includes(randomChampion)) {
-        randomChampion_1.push(randomChampion);
+      const randomChampion1 = Math.floor(Math.random() * a.length);
+      if (!randomChampion.includes(randomChampion1)) {
+        randomChampion.push(randomChampion1);
+        randomChampion_1.push(randomChampion1);
         const finalItem = [];
         let numbers = [];
         let numberLegen = [];
@@ -156,8 +157,8 @@ const App = () => {
           });
         }
         const lol_1 = {
-          champion: a[randomChampion].champion,
-          img: a[randomChampion].img,
+          champion: a[randomChampion1].champion,
+          img: a[randomChampion1].img,
           item_1: finalItem[0].item1[0].img,
           item_2: finalItem[0].item2[0].img,
           item_3: finalItem[0].item2[1].img,
@@ -183,7 +184,8 @@ const App = () => {
     const randomChampion_2 = [];
     while (randomChampion_2.length < 14) {
       const random_2 = Math.floor(Math.random() * a.length);
-      if (!randomChampion_2.includes(random_2)) {
+      if (!randomChampion.includes(random_2)) {
+        randomChampion.push(random_2);
         randomChampion_2.push(random_2);
         const finalItem = [];
         // console.log(randomBoost);
